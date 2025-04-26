@@ -20,7 +20,7 @@ public class OrderController {
 
 	@PostMapping("/place-order")
 	@ResponseStatus(code=HttpStatus.CREATED)
-	public String placeOrder(@RequestBody Order order) {
+	public String placeOrder(@RequestBody Order order) throws Exception {
 		orderService.placeOrder(order);
 		return "Order Placed Successfully";
 		
